@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Blog</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    
+  </head>
+
+  <body>
+  <div id="wrapper">
+
+<div id="header">
+<h1>ICMR-NIE Blog</h1>
+
+<ul id="nav" class="fc">
+<li id="thome"><a href="#" class="selected"></a></li>
+<li id="tabout"><a href="#"></a></li>
+<li id="tcontact"><a href="#"></a></li>
+</ul>
+</div>
+<div id="title">
+<form action="#">
+<input type="text" maxlength="30" size="15"/>
+<img src="/assets/searchbutton.png" border="0" height="29" width="19" class="searchbutton" alt="searchbutton" title="searchbutton"/>
+</form>
+</div>
+<div id="minHeight"></div><!-- Safari hack -->
+<div id="content">
+<div id="leftbar"> <!-- Main content goes here! -->
+<h3>September 26th, 2023</h3>
+<h2>Generic Blog Is Finished</h2>
+ <%= yield %>
+
+</div>
+
+<div id="rightbar"> <!-- Menu stuff is here-->
+<h2 class="toph2">Catagories</h2>
+<p>Testing</p>
+<p>Business</p>
+<p>Personal</p>
+<h2>Blogroll</h2>
+<p>Me</p>
+<p>Wordpress</p>
+
+</div>
+<div id="clearfooter"></div>
+</div>
+<div id="footer">
+<br>
+
+<p>Powered By ICMR</p>
+
+</div>
+</div>
+   
+  </body>
+</html>
